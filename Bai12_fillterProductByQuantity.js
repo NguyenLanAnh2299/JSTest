@@ -1,10 +1,11 @@
-var products = [];
-products.forEach(fillterProductByQuantity);
 
 function fillterProductByQuantity( item){
-	if (item.quantity > 0 && item.isDelete == false) {
-		Products.push(item);
-	};
+	var products = [];
+	li.forEach(function(item){
+		if (item.quantity > 0 && item.isDelete == false) {
+			products.push(item);
+		};
+	});
 	return products;
 }
 
