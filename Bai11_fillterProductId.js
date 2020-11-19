@@ -1,12 +1,12 @@
 
-var Products = [];
-Products.forEach(fillterProductById);
-
-function fillterProductById( item){
-	if (item.id == id) {
-		Products.push(item);
-	};
-	return Products[0].name;
+function filterProductById(id, list) {
+    var result = [];
+    list.forEach(function(item) {
+        if (item.id == id) {
+            result.push(item);
+        }
+    });
+    return result[0].name;
 }
 
 //ES6
