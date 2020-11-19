@@ -1,13 +1,12 @@
 
-var products = [];
-var date = new Date();
-products.forEach(fillterProductBySaleDate);
-
-function fillterProductBySaleDate( item){
-	if (item.saleDate > date.valueOf() && item.isDelete == false) {
-		products.push(item);
-	};
-	return products;
+function filterProductBySaleDate(list) {
+	var date = new Date().valueOf();
+     list.forEach(function (item) {
+       if (item.qulity > 0 && item.isDelete == false) {
+            result.push(item);
+        }
+    });
+    return result;
 }
 
 
