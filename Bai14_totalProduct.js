@@ -1,18 +1,14 @@
 
-var sum = 0;
-var result = [];
-result.forEach(totalQuantity);
-
-function totalQuantity(item){
-	 sum += item;
-	 document.getElementById("").innerHTML = sum; //<p id=""></p>
-}
+function totalQuantity(list) {
+    var total = 0;
+        list.forEach(function(item) {
+            total += item.qulity;
+        });
+        return total;
+    }
 
 //using reduce
-var result= [];
-function getSum(total, num){
-	return total + num;
-}
-function totalQuantityReduct(item){
-	document.getElementById("").innerHTML = result.reduce(getSum);//<p id=""></p>
+function (list){
+	var reducer = (accumulator, currentValue) => accumulator + currentValue.qulity;
+	return list.reduce(reducer, 0);
 }
